@@ -31,8 +31,9 @@ void delete_column(COLUMN **column) {
 }
 
 void print_column(COLUMN *column) {
-    printf("Column: %s\n", column->title);
+    printf("%s\n", column->title);
     for (int i = 0; i < column->logical_size; i++) {
+        printf("[%d]\t", i);
         printf("%d\n", column->data[i]);
     }
 }
